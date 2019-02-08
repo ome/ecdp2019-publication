@@ -1,4 +1,4 @@
-FROM openmicroscopy/bioformats:east
+FROM openmicroscopy/bioformats:6.0.0-rc1
 
 COPY --chown=bf:bf convert.sh /tmp/convert.sh
 RUN chmod +x /tmp/convert.sh
