@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>omero</groupId>
+  <artifactId>bio-formats</artifactId>
+  <version>6.0.0</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <server.home>/opt/omero/server/OMERO.server</server.home>
+    <bioformats.version>6.0.0</bioformats.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>ome</groupId>
+      <artifactId>formats-gpl</artifactId>
+      <version>${bioformats.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>copy-server</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <stripVersion>true</stripVersion>
+              <outputDirectory>${server.home}/lib/server</outputDirectory>
+            </configuration>
+          </execution>
+          <execution>
+            <id>copy-client</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <stripVersion>true</stripVersion>
+              <outputDirectory>${server.home}/lib/client</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>ome</id>
+      <name>OME artifactory</name>
+      <url>https://artifacts.openmicroscopy.org/artifactory/maven</url>
+    </repository>
+    <repository>
+      <id>unidata</id>
+      <name>Unidata Repository</name>
+      <url>https://artifacts.unidata.ucar.edu/content/repositories/unidata-releases</url>
+    </repository>
+  </repositories>
+</project>

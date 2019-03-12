@@ -13,7 +13,7 @@ services:
       - "database:/var/lib/postgresql/data"
 
   omero:
-    image: openmicroscopy/omero-server:5.4
+    build: omero-server
     environment:
       - CONFIG_omero_db_host=database
       - CONFIG_omero_db_user=omero
