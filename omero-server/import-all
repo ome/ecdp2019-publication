@@ -30,4 +30,4 @@ with cli_login("-s", OMERO_HOST,
                "-w", OMERO_PASS) as cli:
 
     for k, v in as_dictionary(("/import",)).items():
-        cli.onecmd(["import", k])
+        cli.onecmd(["import", "--skip", "upgrade", k])
