@@ -16,17 +16,41 @@ specification.
 
 ## Data generation
 
-This repository contains all the supporting material associated
 
-Script used for generating the official OME-TIFF samples from a collection of files
+-   build the Docker image
 
-    $ docker build -t pyramid_generation .
-    $ docker run --rm -v /uod/idr/repos/curated:/in -v /uod/idr-scratch/ome-tiff/:/out pyramid_generation
+        $ docker build -t converter converter
+
+-   download the source images used for testing
+
+        $ wget -i pff_list.txt -P source/
+
+-   generate pyramidal OME-TIFF using the Docker image
+
+        $ docker run --rm -v source/:/in -v data/:/out converter
 
 ## Data Management
 
-[QuPath](https://github.com/qupath/qupath)
+[OMERO](https://www.openmicroscopy.org/omero)
+
+This
+
+-   first, either generate OME-TIFF files as described in the previous section
+    or download the official OME-TIFF sub-resolution samples
+
+        $ wget -i ometiff_list.txt -P data/
+
+-   a full OMERO application (OMERO 5.4, Bio-Formats 6.0.0, OMERO.iviewer) can
+    be deployed using [Docker compose](https://docs.docker.com/compose/) :
+    
+        $ docker-compose up
+
+-   Go to http://localhost:4080/webclient and log in using the user `root` and
+    the password `omero`.
 
 ## WSI Analysis
 
 [QuPath](https://qupath.github.io)
+
+-   first, either generate OME-TIFF files as described in the previous section
+    or download the official OME-TIFF sub-resolution samples
