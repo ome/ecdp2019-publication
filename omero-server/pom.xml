@@ -19,6 +19,12 @@
       <groupId>ome</groupId>
       <artifactId>formats-gpl</artifactId>
       <version>${bioformats.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.minio</groupId>
+          <artifactId>minio</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 
