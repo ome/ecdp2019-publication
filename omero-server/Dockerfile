@@ -4,6 +4,6 @@ USER root
 RUN yum -y install maven
 ADD pom.xml 10-experimental.sh 99-run.sh /startup/
 ADD wait-on-login import-all /tools/
-RUN mkdir /import && touch /import/test.fake
+RUN mkdir /import
 
 USER omero-server
