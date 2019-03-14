@@ -1,6 +1,7 @@
 FROM openjdk:8
 
-ENV URL https://downloads.openmicroscopy.org/latest/bio-formats6/artifacts/bftools.zip
+ENV VERSION 6.0.0
+ENV URL https://downloads.openmicroscopy.org/bio-formats/$VERSION/artifacts/bftools.zip
 RUN apt-get install wget && \
 	wget $URL && \
 	unzip bftools.zip -x '*.bat' -d /opt/ \
