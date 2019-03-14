@@ -4,7 +4,7 @@
 # https://downloads.openmicroscopy.org/images/OME-TIFF/2016-06/sub-resolutions/
 
 # Download original source files
-wget -i sample_sources.txt
+wget -i $(dirname "$0")/sample_sources.txt
 
 # Brightfield WSI
 /opt/bftools/bfconvert -no-upgrade -noflat -compression JPEG Leica-1.scn /out/Leica-1.ome.tiff
