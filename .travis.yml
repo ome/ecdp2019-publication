@@ -8,3 +8,10 @@ services:
 
 script:
   - docker-compose up -d
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
