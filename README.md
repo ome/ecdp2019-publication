@@ -1,6 +1,7 @@
 # Bringing Open Data to Whole Slide Imaging
 
 [![Build Status](https://travis-ci.org/ome/ecdp2019-publication.svg)](https://travis-ci.org/ome/ecdp2019-publication)
+[![DOI](https://zenodo.org/badge/174513696.svg)](https://zenodo.org/badge/latestdoi/174513696)
 
 This repository contains all supported material for the technical paper
 submitted for the 15th European Congress on Digital Pathology (ECDP).
