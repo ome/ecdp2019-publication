@@ -19,7 +19,7 @@
       <groupId>ome</groupId>
       <artifactId>formats-gpl</artifactId>
       <version>${bioformats.version}</version>
-      </exclusions>
+      <exclusions>
         <exclusion>
           <groupId>commons-codec</groupId>
           <artifactId>commons-codec</artifactId>
