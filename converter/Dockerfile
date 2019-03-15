@@ -8,4 +8,4 @@ RUN apt-get install wget && \
 
 ENV BF_MAX_MEM 2g
 ADD generate-samples.sh sample_sources.txt /opt/
-ENTRYPOINT ["/opt/bftools/bfconvert"]
+ENTRYPOINT ["/opt/generate-samples.sh"]

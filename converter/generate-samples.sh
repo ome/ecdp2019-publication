@@ -8,7 +8,7 @@ wget -i $(dirname "$0")/sample_sources.txt
 
 # Brightfield WSI
 /opt/bftools/bfconvert -no-upgrade -noflat -compression JPEG Leica-1.scn /out/Leica-1.ome.tiff
-/opt/bftools/bfconvert -no-upgrade -noflat -compression JPEG Leica-2.scn Leica-2.ome.tiff
+/opt/bftools/bfconvert -no-upgrade -noflat -compression JPEG Leica-2.scn /out/Leica-2.ome.tiff
 
 # Fluorescence WSI
 /opt/bftools/bfconvert -no-upgrade -noflat -compression LZW LuCa-7color_Scan1.qptiff /out/LuCa-7color_Scan1.ome.tiff

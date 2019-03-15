@@ -10,7 +10,7 @@ install:
   - docker build -t converter converter
 
 script:
-  - docker run --rm -it -v $(pwd)/data:/data converter -noflat -pyramid-resolutions 4 -pyramid-scale 2 /data/wsi.fake /data/ome.tiff
+  - docker run --rm -it -v $(pwd)/data:/data --entrypoint /opt/bftools/bfconvert converter -noflat -pyramid-resolutions 4 -pyramid-scale 2 /data/wsi.fake /data/ome.tiff
   - docker-compose up -d
 
 deploy:
