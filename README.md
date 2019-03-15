@@ -29,7 +29,7 @@ fluorescence, Z-stack, multichannel) are publicly available as
 
 ## Generation
 
-The [https://www.openmicroscopy.org/bio-formats/](Bio-Formats) library supports
+The [Bio-Formats](https://www.openmicroscopy.org/bio-formats/) library supports
 the reading of over 150 proprietary file formats (PFFs) including multiple 
 Whole Slide Imaging (WSI) formats. In addition, it acts as the reference Java
 implementation for reading and writing OME-TIFF files.
