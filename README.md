@@ -62,7 +62,7 @@ A [milestone release of QuPath 0.2.0](https://github.com/qupath/qupath/releases/
 has been released including support for OME-TIFF pyramids. After downloading
 and extracting the application, images can be imported using `File > Open`.
 
-![QuPath 0.2.0-m1](QuPath.jpg)
+![QuPath 0.2.0-m1](QuPath.png)
 
 A full [OMERO](https://www.openmicroscopy.org/omero) application using OMERO 5.4.10, Bio-Formats 6.0.0 and OMERO.iviewer can be deployed via
 [Docker compose](https://docs.docker.com/compose/). All the images under
