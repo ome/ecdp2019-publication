@@ -1,4 +1,4 @@
-FROM openmicroscopy/omero-server:5.4
+FROM openmicroscopy/omero-server:5.4.10
 
 USER root
 RUN yum -y install maven

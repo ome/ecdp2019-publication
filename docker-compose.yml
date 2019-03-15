@@ -30,7 +30,7 @@ services:
       - "./data:/import"
 
   web:
-    image: openmicroscopy/omero-web-standalone:5.4
+    image: openmicroscopy/omero-web-standalone:5.4.10
     environment:
       - OMEROHOST=omero
     networks:
