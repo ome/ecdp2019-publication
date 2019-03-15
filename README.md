@@ -9,17 +9,23 @@ the 15th European Congress on Digital Pathology (ECDP).
 
 ## Specification
 
-The latest version of the OME-TIFF specification is available 
-[here](https://docs.openmicroscopy.org/latest/ome-model/ome-tiff/data.html#sub-resolutions). The 
-[sub-resolutions](https://docs.openmicroscopy.org/ome-model/6.0.0/ome-tiff/data.html#sub-resolutions)
-section specifies the storage of downsampled resolutions or sub-resolutions
-using the
+[OME-TIFF](https://docs.openmicroscopy.org/latest/ome-model/ome-tiff/) is an
+open file format allowing to store multidimensional images combining the
+OME imaging metadata model and the 
+[TIFF](https://www.adobe.io/open/standards/TIFF.html) specification.
+
+In February 2019, the OME-TIFF specification was updated to add backwards
+compatible support for multi-resolution images like Whole Slide Images. The
+[sub-resolutions](https://docs.openmicroscopy.org/latest/ome-model/ome-tiff/data.html#sub-resolutions)
+section of the OME-TIFF specification describes how downsampled images or
+sub-resolutions must be stored using the
 [SubIFDs](https://www.awaresystems.be/imaging/tiff/tifftags/subifds.html)
 extension tag of the [TIFF](https://www.adobe.io/open/standards/TIFF.html)
 specification.
 
-See also [OME-TIFF samples](https://docs.openmicroscopy.org/latest/ome-model6/ome-tiff/data.html#sub-resolutions)
-for example of OME-TIFF files with sub-resolutions.
+Public examples of WSI images with various modalities (brightfield,
+fluorescence, Z-stack, multichannel) are publicly available as
+[OME-TIFF samples](https://docs.openmicroscopy.org/latest/ome-model/ome-tiff/data.html#sub-resolutions).
 
 ## Generation
 
@@ -28,7 +34,15 @@ the reading of over 150 proprietary file formats (PFFs) including multiple
 Whole Slide Imaging (WSI) formats. In addition, it acts as the reference Java
 implementation for reading and writing OME-TIFF files.
 
-The Bio-Formats `bfconvert` command line utility was used to convert 
+[Bio-Formats 6.0.0](https://www.openmicroscopy.org/2019/02/18/bio-formats-6-0-0.html)
+introduces support for the updated OME-TIFF specification with
+sub-resolutions.
+[Binaries](https://downloads.openmicroscopy.org/bio-formats/6.0.0/),
+[API documentation](https://downloads.openmicroscopy.org/bio-formats/6.0.0/api/)
+and [technical documentation](https://docs.openmicroscopy.org/bio-formats/6.0.0/)
+of this release are all publicly and freely available.
+
+The Bio-Formats `bfconvert` command line utility was used to convert
 WSI PFFs into open OME-TIFF with different compressions, tile sizes. When
 no pyramidal levels are present in the original image, this command allows
 to specify a number of sub-resolutions to be generated with a given
