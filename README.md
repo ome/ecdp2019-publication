@@ -73,3 +73,5 @@ the [data](data) folder will be auto-imported at startup time:
 
 After deployment, you can log in to http://localhost:4080/webclient using the
 `root` user with the password `omero`.
+
+![OMERO](OMERO.png)
