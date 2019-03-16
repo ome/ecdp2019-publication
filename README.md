@@ -16,7 +16,7 @@ OME imaging metadata model and the
 
 In February 2019, the OME-TIFF specification was updated to add backwards
 compatible support for multi-resolution images like Whole Slide Images. The
-[sub-resolutions](https://docs.openmicroscopy.org/latest/ome-model/ome-tiff/data.html#sub-resolutions)
+[sub-resolutions](https://docs.openmicroscopy.org/latest/ome-model/ome-tiff/specification.html#sub-resolutions)
 section of the OME-TIFF specification describes how downsampled images or
 sub-resolutions must be stored using the
 [SubIFDs](https://www.awaresystems.be/imaging/tiff/tifftags/subifds.html)
@@ -51,8 +51,8 @@ downsampling factory.
 To test the generation of multi-resolution OME-TIFF files, we used a set of
 [original WSI PFFs](converter/sample_sources.txt) covering various modalities
 (brightfield, fluorescence, multi-channel, multi-Z, floating point). The
-[generate-samples.sh](generate-samples.sh) script contains the conversion
-parameters used for generating the derived OME-TIFF files.
+[generate-samples.sh](converter/generate-samples.sh) script contains the
+conversion parameters used for generating the derived OME-TIFF files.
 
 It is possible to reproduce this conversion using the [Docker](converter/Dockerfile) image included in this code:
 
